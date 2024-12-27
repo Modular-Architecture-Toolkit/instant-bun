@@ -1,0 +1,14 @@
+{
+    "name": "@bnk/cookies",
+    "version": "1.0.0",
+    "main": "cookies.ts",
+    "types": "cookies.ts",
+    "devDependencies": {
+        "bun-types": "*"
+    },
+    "scripts": {
+        "test": "bun test",
+        "prepublishOnly": "bun test",
+        "publish:cookies": "bun publish --access public"
+    }
+}
