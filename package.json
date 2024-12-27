@@ -1,6 +1,6 @@
 {
   "name": "bnkit",
-  "version": "0.5.21",
+  "version": "0.5.23",
   "main": "index.ts",
   "workspaces": [
     "packages/*"
