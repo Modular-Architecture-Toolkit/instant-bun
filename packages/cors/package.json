@@ -1,0 +1,14 @@
+{
+    "name": "@bnk/cors",
+    "version": "1.0.1",
+    "main": "cors.ts",
+    "types": "cors.ts",
+    "devDependencies": {
+        "bun-types": "*"
+    },
+    "scripts": {
+        "test": "bun test",
+        "prepublishOnly": "bun test",
+        "publish:cors": "bun publish --access public"
+    }
+}

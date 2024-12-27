@@ -1,26 +1,21 @@
-import * as auth from './auth'
-import * as cli from './cli'
-import * as cookies from './cookies'
-import * as dataGen from './data-gen'
-import * as deploy from './deploy'
-import * as fetcher from './fetcher'
-import * as filesFolders from './files-folders'
-import * as htmlody from './htmlody'
-import * as jwt from './jwt'
-import * as logger from './logger'
-import * as npm from './npm-release'
-import * as server from './server'
-import * as sqlite from './sqlite'
-import * as state from './state'
-import * as uuid from './uuid'
-import * as validation from './validation'
+import * as auth from './packages/auth'
+import * as cookies from './packages/cookies'
+import * as dataGen from './packages/data-gen'
+import * as deploy from './packages/deploy'
+import * as fetcher from './packages/fetcher'
+import * as filesFolders from './packages/files-folders'
+import * as htmlody from './packages/htmlody'
+import * as jwt from './packages/jwt'
+import * as logger from './packages/logger'
+import * as npm from './packages/npm-release'
+import * as state from './packages/state'
+import * as uuid from './packages/uuid'
 
 // utility exports
-import * as utils from './utils/classy'
+import * as utils from './packages/utils/classy'
 
 export {
   auth,
-  cli,
   cookies,
   dataGen,
   deploy,
@@ -30,10 +25,7 @@ export {
   jwt,
   logger,
   npm,
-  server,
-  sqlite,
   state,
   utils,
   uuid,
-  validation,
 }

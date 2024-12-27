@@ -1,0 +1,14 @@
+{
+    "name": "@bnk/jwt",
+    "version": "1.0.0",
+    "workspaces": [
+        "packages/*"
+    ],
+    "main": "index.ts",
+    "types": "index.ts",
+    "scripts": {
+        "test": "bun test",
+        "prepublishOnly": "bun test",
+        "publish:jwt": "bun publish --access public"
+    }
+}

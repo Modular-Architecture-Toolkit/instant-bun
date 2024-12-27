@@ -2,6 +2,9 @@
   "name": "bnkit",
   "version": "0.5.20",
   "main": "index.ts",
+  "workspaces": [
+    "packages/*"
+  ],
   "devDependencies": {
     "bun": "^1.1.21",
     "bun-types": "^1.1.21",

@@ -1,0 +1,30 @@
+{
+    "name": "@bnk/router",
+    "version": "1.0.4",
+    "type": "module",
+    "main": "index.ts",
+    "types": "index.ts",
+    "files": [
+        "*.ts",
+        "src/**/*.ts",
+        "src/**/*.d.ts",
+        "src/**/*.js",
+        "src/**/*.json",
+        "src/**/*.md"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "test": "bun test",
+        "prepublishOnly": "bun test",
+        "publish:router": "bun publish --access public"
+    },
+    "devDependencies": {
+        "bun-types": "latest"
+    },
+    "dependencies": {
+        "zod": "^3.23.8",
+        "@bnk/cors": "workspace:*"
+    }
+}

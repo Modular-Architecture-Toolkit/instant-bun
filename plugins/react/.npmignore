@@ -1,7 +1,0 @@
-bun.lockb
-node_modules
-app
-
-public
-vite.config.js
-index.html

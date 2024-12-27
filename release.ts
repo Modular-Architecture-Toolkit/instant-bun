@@ -3,7 +3,7 @@ import path from 'path'
 import { exit } from 'process'
 // import * as u from "./";
 import { deploy, npm } from 'index'
-import { ulog } from './utils/ulog'
+import { ulog } from './packages/utils/ulog'
 
 // run bun test
 const testProc = Bun.spawnSync(['bun', 'test', '--coverage'], {})
@@ -37,9 +37,9 @@ const { npmPublish, setupNpmAuth, updatePackageVersion } = npm.npmReleaseFactory
 const corePackagePath = path.resolve(process.cwd(), 'package.json')
 
 // todo resolve all plugin paths
-const pluginReactPath = path.resolve(process.cwd(), 'plugins', 'react', 'package.json')
+const pluginReactPath = path.resolve(process.cwd(), 'packages', 'plugins', 'react', 'package.json')
 
-const pluginReactServerPath = path.resolve(process.cwd(), 'plugins', 'react-server', 'package.json')
+const pluginReactServerPath = path.resolve(process.cwd(), 'packages', 'plugins', 'react-server', 'package.json')
 
 ulog({
   actor: e?.GITHUB_ACTOR,
