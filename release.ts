@@ -36,10 +36,6 @@ const { npmPublish, setupNpmAuth, updatePackageVersion } = npm.npmReleaseFactory
 
 const corePackagePath = path.resolve(process.cwd(), 'package.json')
 
-// todo resolve all plugin paths
-const pluginReactPath = path.resolve(process.cwd(), 'packages', 'plugins', 'react', 'package.json')
-
-const pluginReactServerPath = path.resolve(process.cwd(), 'packages', 'plugins', 'react-server', 'package.json')
 
 ulog({
   actor: e?.GITHUB_ACTOR,
@@ -53,7 +49,6 @@ ulog({
   isLocalRun,
   isAlpha,
   corePackagePath,
-  pluginReactPath,
 })
 
 /* Script */
@@ -70,17 +65,6 @@ const newVersion = await updatePackageVersion({
 })
 
 await npmPublish({ packagePath: corePackagePath, isAlpha, isBeta })
-
-await updatePackageVersion({ packagePath: pluginReactPath, isAlpha, isBeta })
-await npmPublish({ packagePath: pluginReactPath, isAlpha, isBeta })
-
-await updatePackageVersion({
-  packagePath: pluginReactServerPath,
-  isAlpha,
-  isBeta,
-})
-
-await npmPublish({ packagePath: pluginReactServerPath, isAlpha, isBeta })
 
 if (!isLocalRun && !isAlpha) {
   await commitAndPush(`Pushing version: ${newVersion}`)
