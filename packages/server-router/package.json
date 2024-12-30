@@ -1,6 +1,6 @@
 {
     "name": "@bnk/router",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "type": "module",
     "main": "index.ts",
     "types": "index.ts",
@@ -24,7 +24,7 @@
         "bun-types": "latest"
     },
     "dependencies": {
-        "zod": "^3.23.8",
-        "@bnk/cors": "workspace:*"
+        "@bnk/cors": "^1.0.1",
+        "zod": "^3.23.8"
     }
 }
